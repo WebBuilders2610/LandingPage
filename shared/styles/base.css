@@ -1,0 +1,26 @@
+/* ──────────────────────────────
+   RESET & BASE
+────────────────────────────── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: auto;
+}
+body {
+    background: #111;
+    color: #f1f1f1;
+    font-family: system-ui, sans-serif;
+    overflow-x: hidden;
+}
+img {
+    display: block;
+}
+button {
+    background: none;
+    border: none;
+}

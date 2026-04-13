@@ -1,0 +1,209 @@
+/* ──────────────────────────────
+   HERO
+────────────────────────────── */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+#hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+/* ── Stats ── */
+.hero-stats {
+    position: absolute;
+    top: 4rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: clamp(13rem, 18vw, 34rem);
+    z-index: 10;
+}
+@media (min-width: 1024px) {
+    .hero-stats {
+        top: 12rem;
+        right: 4rem;
+    }
+}
+
+.hero-stat {
+    width: 100%;
+    transition: opacity 0.5s, transform 0.5s;
+}
+.hero-stat.inactive {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+}
+@media (min-width: 1024px) {
+    .hero-stat.inactive {
+        opacity: 1;
+        position: static;
+        pointer-events: auto;
+    }
+}
+
+.stat-line {
+    display: block;
+    margin-bottom: 0.5vw;
+    height: max(1px, 0.1vw);
+    width: 100%;
+    background: linear-gradient(to right, transparent, #fff);
+}
+.stat-label {
+    font-weight: 500;
+    color: #adadad;
+    margin-bottom: 0.3vw;
+    font-size: clamp(0.7rem, 0.7vw, 1.8rem);
+}
+.stat-value-row {
+    color: #fff;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    letter-spacing: -0.04em;
+    margin-bottom: 1vw;
+    font-size: clamp(1.5rem, 2.2vw, 5rem);
+}
+
+/* LoadingDots */
+.loading-dots {
+    display: flex;
+    gap: 2px;
+    font-size: 1.6rem;
+}
+.loading-dots span {
+    color: rgba(255, 255, 255, 0.3);
+}
+.loading-dots .d1 { animation: dot1 1.2s infinite; }
+.loading-dots .d2 { animation: dot2 1.2s infinite; }
+.loading-dots .d3 { animation: dot3 1.2s infinite; }
+
+@keyframes dot1 {
+    0%, 100% { color: #fff; }
+}
+@keyframes dot2 {
+    0%, 20%  { color: rgba(255, 255, 255, 0.3); }
+    30%, 100% { color: #fff; }
+}
+@keyframes dot3 {
+    0%, 50%  { color: rgba(255, 255, 255, 0.3); }
+    60%, 100% { color: #fff; }
+}
+
+/* ── Content Mobile ── */
+.hero-content-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    padding: 0 1.25rem 1.5rem;
+}
+@media (min-width: 1024px) {
+    .hero-content-mobile { display: none; }
+}
+
+/* ── Content Desktop ── */
+.hero-content-desktop {
+    display: none;
+}
+@media (min-width: 1024px) {
+    .hero-content-desktop {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 20;
+        padding: 0 2.5rem 2.5rem;
+    }
+}
+
+/* ── HeroText ── */
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.5rem, 0.8vw, 2rem);
+    max-width: 100%;
+}
+@media (min-width: 1024px) {
+    .hero-text { max-width: 55%; }
+}
+
+.hero-h1 {
+    color: #fff;
+    font-weight: 500;
+    line-height: 1;
+    font-size: clamp(2rem, 3.7vw, 9rem);
+}
+@media (min-width: 1024px) {
+    .hero-h1 { max-width: 16ch; }
+}
+
+.hero-p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: clamp(0.85rem, 0.8vw, 2.2rem);
+    line-height: 1.5;
+}
+@media (min-width: 1024px) {
+    .hero-p { max-width: 50ch; }
+}
+
+/* ── LearnMore ── */
+.hero-learn-more {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    width: 100%;
+    padding: clamp(1.2rem, 1.8vw, 5rem) clamp(2rem, 2vw, 8rem);
+    min-width: clamp(220px, 13vw, 600px);
+    min-height: clamp(80px, 5vw, 240px);
+    cursor: pointer;
+}
+@media (min-width: 1024px) {
+    .hero-learn-more { width: auto; }
+}
+
+.hero-learn-more-label {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    color: #fff;
+    font-size: clamp(0.65rem, 0.8vw, 1.8rem);
+    font-weight: 500;
+}
+.hero-learn-more-arrow {
+    position: absolute;
+    bottom: 0.75rem;
+    right: 0.75rem;
+    width: clamp(12px, 1vw, 28px);
+    height: clamp(12px, 1vw, 28px);
+    transition: transform 0.3s ease-in;
+}
+.hero-learn-more:hover .hero-learn-more-arrow {
+    transform: translateX(4px);
+}

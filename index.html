@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Institute of Health</title>
+
+        <!-- Lenis smooth scroll -->
+        <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+        <!-- Shared -->
+        <link rel="stylesheet" href="shared/styles/base.css" />
+
+        <!-- Features -->
+        <link rel="stylesheet" href="features/navbar/navbar.css" />
+        <link rel="stylesheet" href="features/drawer/drawer.css" />
+        <link rel="stylesheet" href="features/hero/hero.css" />
+        <link rel="stylesheet" href="features/about/about.css" />
+    </head>
+    <body>
+
+        <!-- NAVBAR -->
+        <!-- navbar.html contents inline -->
+        <nav id="navbar">
+            <div class="nav-gradient"></div>
+            <div class="nav-desktop">
+                <div class="nav-logo">Logo</div>
+                <div class="nav-links">
+                    <span>Courses</span>
+                    <span>Events</span>
+                    <span>Testimonials</span>
+                    <span>Articles</span>
+                    <span>FAQ</span>
+                </div>
+                <div class="nav-actions">
+                    <span class="nav-about">About</span>
+                    <div class="nav-contact">
+                        <img src="https://cdn.prod.website-files.com/69014633b3494c3d0ef793fc/6906744bc45e42ad5fe6cd95_arrow_header.svg" alt="arrow" />
+                        <span>Contact</span>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-mobile-bar">
+                <div class="nav-mobile-logo">Logo</div>
+                <div class="nav-menu-trigger" id="menu-trigger">
+                    <span class="nav-menu-label">Menu</span>
+                    <button class="hamburger-btn" aria-label="Open menu">
+                        <span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- DRAWER -->
+        <div class="drawer" id="drawer" aria-hidden="true">
+            <div class="drawer-header">
+                <span class="drawer-logo">Logo</span>
+                <button class="drawer-close" id="drawer-close" aria-label="Close menu">
+                    Close
+                    <div class="close-icon"><span></span><span></span></div>
+                </button>
+            </div>
+            <nav class="drawer-links">
+                <a href="#">Courses</a>
+                <a href="#">Events</a>
+                <a href="#">Testimonials</a>
+                <a href="#">Articles</a>
+                <a href="#">About</a>
+            </nav>
+            <div class="drawer-socials">
+                <span class="drawer-socials-label">Follow us!</span>
+                <div class="drawer-socials-row">
+                    <a class="social-icon" href="https://www.instagram.com/instituteofhealth_/" target="_blank" rel="noopener">
+                        <img src="https://cdn.prod.website-files.com/69014633b3494c3d0ef793fc/6909669dc77a91308606f6fc_instagram.png" alt="Instagram" />
+                    </a>
+                    <a class="social-icon" href="https://www.linkedin.com/company/instituteofhealth/" target="_blank" rel="noopener">
+                        <img src="https://cdn.prod.website-files.com/69014633b3494c3d0ef793fc/6909669dd08b57dfaa285f05_linkedin.png" alt="LinkedIn" />
+                    </a>
+                    <a class="social-icon" href="#" target="_blank" rel="noopener">
+                        <img src="https://cdn.prod.website-files.com/69014633b3494c3d0ef793fc/6909669dd34631d353d10b08_youtube.png" alt="YouTube" />
+                    </a>
+                    <a class="social-icon" href="https://www.facebook.com/profile.php?id=100049240609606" target="_blank" rel="noopener">
+                        <img src="https://cdn.prod.website-files.com/69014633b3494c3d0ef793fc/694048b7f8badf022a9e8218_fb_icon.png" alt="Facebook" />
+                    </a>
+                </div>
+            </div>
+            <div class="drawer-cta">
+                <button class="drawer-cta-btn" id="drawer-cta">
+                    <span>Contact</span>
+                    <img class="cta-arrow" src="https://cdn.prod.website-files.com/69014633b3494c3d0ef793fc/6906744bc45e42ad5fe6cd95_arrow_header.svg" alt="arrow" />
+                </button>
+            </div>
+        </div>
+
+        <!-- HERO -->
+        <section class="hero">
+            <video id="hero-video" autoplay muted playsinline></video>
+            <div class="hero-overlay"></div>
+            <div class="hero-stats" id="hero-stats"></div>
+            <div class="hero-content-mobile">
+                <div class="hero-text">
+                    <h1 class="hero-h1">Global leaders in functional medicine and recognition</h1>
+                    <p class="hero-p">The only integrative nutritional therapy certification combining functional blood work, nutrition and business mentorship.</p>
+                </div>
+                <div class="hero-learn-more">
+                    <span class="hero-learn-more-label">Learn More</span>
+                    <img class="hero-learn-more-arrow" src="https://cdn.prod.website-files.com/69014633b3494c3d0ef793fc/6906744bc45e42ad5fe6cd95_arrow_header.svg" alt="arrow" />
+                </div>
+            </div>
+            <div class="hero-content-desktop">
+                <div class="hero-text">
+                    <h1 class="hero-h1">Global leaders in functional medicine and recognition</h1>
+                    <p class="hero-p">The only integrative nutritional therapy certification combining functional blood work, nutrition and business mentorship.</p>
+                </div>
+                <div class="hero-learn-more">
+                    <span class="hero-learn-more-label">Learn More</span>
+                    <img class="hero-learn-more-arrow" src="https://cdn.prod.website-files.com/69014633b3494c3d0ef793fc/6906744bc45e42ad5fe6cd95_arrow_header.svg" alt="arrow" />
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="about">ABOUT</section>
+
+        <!-- Entry point -->
+        <script type="module" src="main.js"></script>
+    </body>
+</html>
